@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Title</title>
+	<link href="../mycss/GridSystem.css" rel="stylesheet">
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	
+	<script>
+		function AddContainer() {
+			document.getElementById('step-2').style.visibility='visible';
+			document.getElementById('step-2').style.animationName='step2';
+			document.getElementById('step-2').style.animationDuration='2s';
+			
+			
+			document.getElementById('code-block').innerText =
+					"<div class=\"container px-0\" id=\"example-cont\">\n" +
+					"</div>\n";
+			
+			
+			document.getElementById('output-block').innerHTML = document.getElementById('code-block').innerText;
+			
+		}
+		
+		function AddRow() {
+			
+			document.getElementById('step-3').style.visibility ='visible';
+			document.getElementById('step-3').style.animationName='step3';
+			document.getElementById('step-3').style.animationDuration='2s';
+			document.getElementById('code-block').innerText=
+					"<div class=\"container px-0\" id=\"example-cont\">\n" +
+					"\t<div class=\"row mx-0\" id=\"example-row\">\n" +
+					"\t</div>\n" +
+					"</div>\n";
+			document.getElementById('example-cont').innerHTML =
+					"\t<div class=\"row mx-0\" id=\"example-row\">\n" +
+					"\t</div>\n";
+		}
+		
+		function AddDivision() {
+			let numOfDivisions = document.getElementById('division-field').value;
+			
+			document.getElementById('example-row').innerHTML = "";
+			document.getElementById('code-block').innerText =
+					"<div class=\"container px-0\" id=\"example-cont\">\n" +
+					"\t<div class=\"row mx-0\" id=\"example-row\">\n" +
+					"\t</div>\n" +
+					"</div>\n";
+			
+			var numOfColForField = Math.ceil(12 / numOfDivisions);
+			document.getElementById('colums-fields-for-division').innerHTML = "";
+			for (let i = 0; i < numOfDivisions; i++) {
+				var divNumber = i + 1;
+				var divId = "div_" + i;
+				var new_input = "<div class='col-" + 6 + " border-1 text-center' ><strong>Div-" + divNumber + "</strong><br/> <input min='1' type='number' class='form-control col-input-fields' onchange='AddColField(" + i + ")' placeholder='Div-" + divNumber + " Cols' id='" + i + "'></div>";
+				document.getElementById('colums-fields-for-division').innerHTML += new_input;
+			}
+		}
+		
+		function AddColField(divId) {
+			document.getElementById('example-row').style.height="fit-content";
+			let numOfCols = document.getElementById(divId).value;
+			var col_field = document.getElementById("div-" + divId + "_col_");
+			if (col_field != null) {
+				col_field.setAttribute("class", "col-" + numOfCols + " text-center border-1");
+				document.getElementById("div-" + divId + "_col_").innerText = "Col-" + numOfCols;
+			}
+			var code_text =
+					"<div class=\"container px-0\" id='example-cont'>\n" +
+					"\t<div class=\"row mx-0\" id='example-row'>\n";
+			var new_col_field = "\t\t<div class='col-" + numOfCols + " text-center border-1' id='div-" + divId + "_col_'> Col-" + numOfCols + " </div>\n";
+			code_text += document.getElementById('example-row').innerHTML;
+			if (col_field == null) {
+				code_text += new_col_field;
+				document.getElementById('example-row').innerHTML += new_col_field;
+			}
+			code_text +=
+					"\t</div>\n" +
+					"</div>\n";
+			document.getElementById('code-block').innerText = code_text;
+			
+		}
+	
+	
+	</script>
+</head>
+<!--
+<div class="container">
+	<div class="row">
+	
+	</div>
+</div>
+<input type="number" id="" class="form-control" placeholder="Div-1 columns">
+<div class="col-">col-</div>
+-->
+<!--
+<div class="container" id="example-cont">
+</div>
+<div class="container" id="example-cont">
+	<div class="row">
+	</div>
+</div>
+<div class="container" style="
+     border:2px solid black;
+	 height: 600px">
+	<div class="row" style="
+	 border:3px solid blue;">
+		
+	</div>
+</div>
+
+-->
+<body>
+	<div class="container" style="border:2px solid black">
+	
+	</div>
+	<div class="container-fluid input-container" id="input-container">
+		<div class="row">
+			<div class="col-12 text-center display-5 fw-bold">
+				Bootstrap Grid System
+			</div>
+			<div class="col-12 text-center display-6 mt-2"> Add Classes</div>
+			<div class="col-12 col-sm-6 col-md-4 mb-sm-0 mb-3 fw-bold ">
+				<div class="row" id="step-1">
+					<div class="col-12 display-6 text-center">Step-1</div>
+					<div class="col-12">
+						<button class="btn btn-primary w-100 px-2" onclick="AddContainer()">Container</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6 col-md-4 mb-sm-0 mb-3 fw-bold ">
+				<div class="row" id="step-2">
+					<div class="col-12 display-6 text-center">Step-2</div>
+					<div class="col-12">
+						<button class="btn btn-info w-100 px-2" onclick="AddRow()">Row</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6 col-md-4 mb-1 mb-sm-0 mb-3">
+				<div class="row" id="step-3">
+					<div class="col-12 display-6 text-center">Step-3</div>
+					<div class="col-12 display-6 text-center" >
+						Add Columns
+					</div>
+					<div class="col-12 text-center "><input class="form-control" id="division-field" min="1"
+					                                        onchange="AddDivision()"
+					                                        placeholder="Enter divisions you want to make in your row(1-12)"
+					                                        type="number">
+					</div>
+					<div class="row" id="colums-fields-for-division">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid mt-md-3 mt-2 output-container">
+		<div class="row overflow-hidden">
+			<div class="col-md-3 col-12 overflow-hidden code-block">
+				<div class="row overflow-hidden">
+					<div class="col-12 mb-4 text-center display-5 fw-bold text-decoration-underline"> Code</div>
+					<pre><code class="col-12 text-start font-monospace" id="code-block"> </code></pre>
+				</div>
+			</div>
+			<div class="col-md-9 col-12 output-block">
+				<div class="row">
+					<div class="col-12 text-center bg-light display-5 mb-2 fw-bold text-decoration-underline">
+						Output
+					</div>
+					<div class="col-12 text-start mb-4 bg-light display-5 " id="output-block"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<script src="../js/bootstrap.bundle.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+</html>

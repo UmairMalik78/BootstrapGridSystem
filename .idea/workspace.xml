@@ -12,6 +12,7 @@
       <list>
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -29,12 +30,15 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\WorkSpace\Web_Engineering_TA_Docs\Lec_1\GridSystem" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\WorkSpace\Web_Engineering_TA_Docs\Lec_1\GridSystem" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/GridSystem/src/index.html" useBuiltInWebServerPort="true">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/GridSystem/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -53,6 +57,8 @@
       <updated>1632407375097</updated>
       <workItem from="1632407376173" duration="36936000" />
       <workItem from="1632502385709" duration="800000" />
+      <workItem from="1632503430361" duration="2588000" />
+      <workItem from="1632557901085" duration="1959000" />
     </task>
     <servers />
   </component>
@@ -64,10 +70,10 @@
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state x="727" y="349" key="#com.intellij.fileTypes.FileTypeChooser/0.40.1920.1040@0.40.1920.1040" timestamp="1632407403035" />
-    <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1632502152066">
+    <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1632507742373">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state x="740" y="294" key="FileChooserDialogImpl/0.40.1920.1040@0.40.1920.1040" timestamp="1632502152066" />
+    <state x="740" y="294" key="FileChooserDialogImpl/0.40.1920.1040@0.40.1920.1040" timestamp="1632507742373" />
     <state width="1899" height="37" key="GridCell.Tab.0.bottom" timestamp="1632502156163">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
@@ -145,7 +151,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/index.html</url>
+          <url>file://$PROJECT_DIR$/index.html</url>
           <line>60</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>

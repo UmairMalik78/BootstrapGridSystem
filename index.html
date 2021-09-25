@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Title</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+	<link href="mycss/GridSystem.css" rel="stylesheet">
+
+</head>
+<body>
+	<div class="container" style="border:2px solid black">
+	
+	</div>
+	<div class="container-fluid input-container" id="input-container">
+		<div class="row">
+			<div class="col-12 text-center display-5 fw-bold">
+				Bootstrap Grid System
+			</div>
+			<div class="col-12 text-center display-6 mt-2"> Add Classes</div>
+			<div class="col-12 col-sm-6 col-md-4 mb-sm-0 mb-3 fw-bold ">
+				<div class="row" id="step-1">
+					<div class="col-12 display-6 text-center">Step-1</div>
+					<div class="col-12">
+						<button class="btn btn-primary w-100 px-2" onclick="AddContainer()">Container</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6 col-md-4 mb-sm-0 mb-3 fw-bold ">
+				<div class="row" id="step-2">
+					<div class="col-12 display-6 text-center">Step-2</div>
+					<div class="col-12">
+						<button class="btn btn-info w-100 px-2" onclick="AddRow()">Row</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6 col-md-4 mb-1 mb-sm-0 mb-3">
+				<div class="row" id="step-3">
+					<div class="col-12 display-6 text-center">Step-3</div>
+					<div class="col-12 display-6 text-center" >
+						Add Columns
+					</div>
+					<div class="col-12 text-center "><input class="form-control" id="division-field" min="1"
+					                                        onchange="AddDivision()"
+					                                        placeholder="Enter divisions you want to make in your row(1-12)"
+					                                        type="number">
+					</div>
+					<div class="row" id="colums-fields-for-division">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid mt-md-3 mt-2 output-container">
+		<div class="row ">
+			<div class="col-md-3 col-12 code-block">
+				<div class="row ">
+					<div class="col-12 mb-4 text-center display-5 fw-bold text-decoration-underline"> Code</div>
+					<pre><code class="col-12 text-start font-monospace" id="code-block"> </code></pre>
+				</div>
+			</div>
+			<div class="col-md-9 col-12  output-block">
+				<div class="row">
+					<div class="col-12 text-center border-0 bg-light display-5 mb-2 fw-bold text-decoration-underline">
+						Output
+					</div>
+					<div class="col-12 border-0 text-start mb-4 bg-light display-5 " id="output-block"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+	<script src="myjs/GridSystem.js"></script>
+
+</body>
+</html>

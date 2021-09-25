@@ -6,7 +6,7 @@
 
 .output-block {
     border-left: 1px solid black;
-    height: 60%;
+    height: 100%;
 }
 
 .code-block {
@@ -15,7 +15,7 @@
 
 .output-container {
     border: 5px solid black;
-    height: 50%;
+    height: 100%;
     overflow: auto;
 }
 
@@ -66,86 +66,86 @@ code {
 }
 
 .output-block .col-1 {
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+    border: 1px solid black;
+
     animation: step1 2s;
-    background-color: #0061e2;
+    background-color: #bda8d2;
 }
 
 .output-block .col-2 {
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+    border: 1px solid black;
+
     animation: step1 2s;
     background-color: yellow;
 }
 
 .output-block .col-3 {
-    border-left: 1px solid black;
+    border: 1px solid black;
     animation: step1 2s;
-    border-right: 1px solid black;
+
     background-color: blueviolet;
 }
 
 .output-block .col-4 {
     animation: step1 2s;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+    border: 1px solid black;
+
     background-color: lightcyan;
 }
 
 .output-block .col-5 {
-    border-left: 1px solid black;
+    border: 1px solid black;
     animation: step1 2s;
     background-color: antiquewhite;
-    border-right: 1px solid black;
-    border-left: 1px solid black;
+
+    border: 1px solid black;
 }
 
 .output-block .col-6 {
-    border-left: 1px solid black;
+    border: 1px solid black;
     animation: step1 2s;
     background-color: lightgreen;
-    border-right: 1px solid black;
+
 }
 
 .output-block .col-7 {
     background-color: aqua;
-    border-left: 1px solid black;
+    border: 1px solid black;
     animation: step1 2s;
-    border-right: 1px solid black;
+
 }
 
 .output-block .col-8 {
     animation: step1 2s;
-    border-left: 1px solid black;
+    border: 1px solid black;
     background-color: seagreen;
-    border-right: 1px solid black;
+
 }
 
 .output-block .col-9 {
-    border-left: 1px solid black;
+    border: 1px solid black;
     background-color: chartreuse;
     animation: step1 2s;
-    border-right: 1px solid black;
+
 }
 
 .output-block .col-10 {
     background-color: orange;
     animation: step1 2s;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+    border: 1px solid black;
+
 }
 
 .output-block .col-11 {
-    border-left: 1px solid black;
+    border: 1px solid black;
     animation: step1 2s;
     background-color: saddlebrown;
-    border-right: 1px solid black;
+
 }
 
 .output-block .col-12 {
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+    border: 1px solid black;
+
     background-color: skyblue;
     animation: step1 2s;
 }
@@ -180,6 +180,7 @@ code {
         opacity: 1
     }
 }
+
 #step-3 {
     visibility: hidden;
 }
